@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="AlertControllerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="I6Y-k3-qLz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jg-Ch-aQB">
+                                <rect key="frame" x="87.5" y="170" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.16631822183098591" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="2N3-ym-mtH"/>
+                                </constraints>
+                                <state key="normal" title="Standard ActionSheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="standardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uym-JV-JO7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuh-7J-XW8">
+                                <rect key="frame" x="87.5" y="130" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="7Qr-20-eI9"/>
+                                </constraints>
+                                <state key="normal" title="Checkmark ActionSheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkmarkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Anp-Mp-uQr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yD6-SW-vsn">
+                                <rect key="frame" x="87.5" y="210" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="mO7-I1-hIU"/>
+                                </constraints>
+                                <state key="normal" title="NoTitile ActionSheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="noTitleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnS-Fs-yZB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRx-1o-syA">
+                                <rect key="frame" x="87.5" y="250" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="OQa-9N-uRl"/>
+                                </constraints>
+                                <state key="normal" title="NoMessage ActionSheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="noMessageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ma8-WS-Ce8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-lH-UXp">
+                                <rect key="frame" x="87.5" y="290" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="DYk-mX-FF1"/>
+                                </constraints>
+                                <state key="normal" title="Standard  Alert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stanardAlertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmD-HN-KSZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJI-U2-wuh">
+                                <rect key="frame" x="87.5" y="330" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ita-v3-bre"/>
+                                </constraints>
+                                <state key="normal" title="Standard Two Alert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stanardAlertTwoButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBd-2Q-vn5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfv-t0-dpg">
+                                <rect key="frame" x="87.5" y="370" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="JOc-8M-9dt"/>
+                                </constraints>
+                                <state key="normal" title="TextField Alert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="textFieldAlertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCv-z0-99o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="417-Aa-0op">
+                                <rect key="frame" x="87.5" y="90" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="LCS-0H-Bcy"/>
+                                </constraints>
+                                <state key="normal" title="System ActionSheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="systemActionSheetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTf-mr-JjJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGh-tS-4kJ">
+                                <rect key="frame" x="87.5" y="410" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1663182218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="KHc-PB-BqJ"/>
+                                </constraints>
+                                <state key="normal" title="System Alert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="systemAlertTwoButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qpl-vV-h7a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25882352941176467" green="0.34509803921568627" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UUj-lH-UXp" firstAttribute="top" secondItem="gRx-1o-syA" secondAttribute="bottom" constant="10" id="1YM-hH-XN7"/>
+                            <constraint firstItem="bfv-t0-dpg" firstAttribute="top" secondItem="qJI-U2-wuh" secondAttribute="bottom" constant="10" id="AKL-fJ-oXd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I6Y-k3-qLz" secondAttribute="trailing" id="AbZ-xT-B7V"/>
+                            <constraint firstItem="kuh-7J-XW8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GQE-P0-Kdy"/>
+                            <constraint firstItem="yD6-SW-vsn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GrD-LK-tOn"/>
+                            <constraint firstItem="qJI-U2-wuh" firstAttribute="top" secondItem="UUj-lH-UXp" secondAttribute="bottom" constant="10" id="HoD-td-aUf"/>
+                            <constraint firstItem="417-Aa-0op" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="HsO-DY-Gky"/>
+                            <constraint firstItem="qJI-U2-wuh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6m-8l-X9N"/>
+                            <constraint firstItem="sGh-tS-4kJ" firstAttribute="top" secondItem="bfv-t0-dpg" secondAttribute="bottom" constant="10" id="NsK-go-Pla"/>
+                            <constraint firstItem="417-Aa-0op" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OCL-y3-svM"/>
+                            <constraint firstItem="gRx-1o-syA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OTW-gE-dSF"/>
+                            <constraint firstItem="I6Y-k3-qLz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ooy-tS-gSQ"/>
+                            <constraint firstItem="yD6-SW-vsn" firstAttribute="top" secondItem="2jg-Ch-aQB" secondAttribute="bottom" constant="10" id="Qen-AV-3XT"/>
+                            <constraint firstItem="I6Y-k3-qLz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SYa-ht-uwb"/>
+                            <constraint firstItem="UUj-lH-UXp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WbE-VV-gBq"/>
+                            <constraint firstItem="2jg-Ch-aQB" firstAttribute="top" secondItem="kuh-7J-XW8" secondAttribute="bottom" constant="10" id="etz-5p-rXf"/>
+                            <constraint firstItem="gRx-1o-syA" firstAttribute="top" secondItem="yD6-SW-vsn" secondAttribute="bottom" constant="10" id="mcO-af-Lyt"/>
+                            <constraint firstItem="I6Y-k3-qLz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mtH-LV-AGP"/>
+                            <constraint firstItem="sGh-tS-4kJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oC2-kx-nV6"/>
+                            <constraint firstItem="kuh-7J-XW8" firstAttribute="top" secondItem="417-Aa-0op" secondAttribute="bottom" constant="10" id="sVC-ln-biM"/>
+                            <constraint firstItem="bfv-t0-dpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xQy-xA-uvN"/>
+                            <constraint firstItem="2jg-Ch-aQB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xto-TW-aBS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="690" height="1227"/>
+    </resources>
+</document>
