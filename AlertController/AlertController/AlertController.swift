@@ -389,7 +389,7 @@ open class AlertController: UIViewController {
             messageLabel.numberOfLines = 0
             messageLabel.textAlignment = .center
             messageLabel.font = hasTitle ? messageFont : titleFont
-            messageLabel.textColor = messageTextColor
+            messageLabel.textColor = hasTitle ? messageTextColor : titleTextColor
             messageLabel.text = message
             messageLabel.sizeToFit()
             messageLabel.frame = CGRect(x: alertViewPadding, y: textAreaPositionY, width: messageWidth, height: messageLabel.frame.height)
