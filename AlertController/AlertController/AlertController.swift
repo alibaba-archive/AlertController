@@ -490,7 +490,14 @@ open class AlertController: UIViewController {
                     button.setBackgroundImage(buttonBackgroundColor[action.style]!.toImage(), for: .normal)
                     button.setBackgroundImage(buttonBackgroundColorHighlighted[action.style]!.toImage(), for: .highlighted)
                     
-                    button.setBottomSeparator(with: seperatorColor)
+                    if index == buttons.count - 1 {
+                        if cancelButtonTag == 0 && !Device.isIPhoneXSeries { // no cancel button
+                            button.setBottomSeparator(with: seperatorColor)
+                        }
+                    } else {
+                        button.setBottomSeparator(with: seperatorColor)
+                    }
+                    
                     button.frame = CGRect(x: 0, y: buttonAreaPositionY, width: innerContentWidth, height: buttonHeight)
                     if actions[index].isSelected {
                         button.setTitleColor(buttonSelectedColor, for: .normal)
@@ -534,7 +541,7 @@ open class AlertController: UIViewController {
                 button.setBackgroundImage(buttonBackgroundColorHighlighted[action.style]!.toImage(), for: .highlighted)
         
                 button.frame = CGRect(x: 0, y: buttonAreaPositionY, width: innerContentWidth, height: buttonHeight)
-                if !isAlert {
+                if !isAlert && !Device.isIPhoneXSeries {
                     button.setBottomSeparator(with: seperatorColor)
                 }
                 buttonAreaPositionY += buttonHeight + buttonMargin

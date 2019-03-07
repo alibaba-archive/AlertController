@@ -18,7 +18,7 @@ class RootViewController: UIViewController {
         let destructiveButtonTitle = "Destructive"
         let otherButtonTitle = "Other Button"
         
-        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
         
         // Create the actions.
         let destructiveAction = UIAlertAction(title: destructiveButtonTitle, style: .destructive) { action in
@@ -59,7 +59,7 @@ class RootViewController: UIViewController {
         let destructiveButtonTitle = "Destructive"
         let otherButtonTitle = "Other Button"
         
-        let alertController = AlertController(title: title, message: message, preferredStyle: .alert)
+        let alertController = AlertController(title: title, message: message, preferredStyle: .actionSheet)
         
         // Create the actions.
         let destructiveAction = AlertAction(title: destructiveButtonTitle, style: .destructive) { action in
