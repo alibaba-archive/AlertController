@@ -15,10 +15,10 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "AlertController"
-  spec.version      = "0.0.1"
-  spec.summary      = "AlertController is a replacement of UIAlertController."
-  spec.description  = "AlertController is a replacement of UIAlertController in Swift, It's is like UIAlertController but more powerful."
+  spec.name         = "TBMAlertController"
+  spec.version      = "0.0.4"
+  spec.summary      = "TBMAlertController is a replacement of UIAlertController."
+  spec.description  = "TBMAlertController is a replacement of UIAlertController in Swift, It's is like UIAlertController but more powerful."
 
   spec.homepage     = "https://github.com/teambition/AlertController"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
