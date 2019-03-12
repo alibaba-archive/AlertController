@@ -504,9 +504,18 @@ open class AlertController: UIViewController {
                     } else {
                         button.setTitleColor(buttonTextColor[action.style], for: .normal)
                     }
+                    
+                    var buttonLeft: CGFloat = 0
                     if actions[index].contentHorizontalAlignment == .left {
                         button.contentHorizontalAlignment = .left
                         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: alertViewPadding, bottom: 0, right: alertViewPadding)
+                        buttonLeft = alertViewPadding
+                    }
+                    if let image = actions[index].leftImage {
+                        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: alertViewPadding * 2, bottom: 0, right: 0)
+                        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: alertViewPadding, bottom: 0, right: 0)
+                        button.setImage(image, for: .normal)
+                        buttonLeft = alertViewPadding * 2
                     }
                     if let rightImage = actions[index].rightImage {
                         let checkmarkImageView =  UIImageView(image: rightImage)
@@ -516,12 +525,9 @@ open class AlertController: UIViewController {
                         button.addConstraint(NSLayoutConstraint(item: checkmarkImageView, attribute: .width, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1, constant: rightImage.size.width))
                         button.addConstraint(NSLayoutConstraint(item: checkmarkImageView, attribute: .centerY, relatedBy: .equal, toItem: button, attribute: .centerY, multiplier: 1, constant: 0))
                         button.addConstraint(NSLayoutConstraint(item: checkmarkImageView, attribute: .trailing, relatedBy: .equal, toItem: button, attribute: .trailing, multiplier: 1, constant: -alertViewPadding))
+                        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: buttonLeft, bottom: 0, right: alertViewPadding * 2 + rightImage.size.width)
                     }
-                    if let image = actions[index].leftImage {
-                        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: alertViewPadding * 2, bottom: 0, right: 0)
-                        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: alertViewPadding, bottom: 0, right: 0)
-                        button.setImage(image, for: .normal)
-                    }
+                    
                     buttonAreaPositionY += buttonHeight + buttonMargin
                 } else {
                     cancelButtonTag = button.tag
