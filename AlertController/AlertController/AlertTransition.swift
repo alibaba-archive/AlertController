@@ -9,14 +9,14 @@
 import Foundation
 
 class AlertTransition: NSObject, UIViewControllerTransitioningDelegate {
-    var alertController: AlertController
+    weak var alertController: AlertController?
     
-    init(alertController: AlertController) {
+    init(alertController: AlertController?) {
         self.alertController = alertController
     }
 
     open func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        alertController.layoutView(presenting)
+        alertController?.layoutView(presenting)
         return AlertAnimation(isPresenting: true)
     }
     
