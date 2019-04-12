@@ -213,13 +213,16 @@
 				TargetAttributes = {
 					C490A0EA2202CD3A00BCCB4D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					C490A0FE2202CD3B00BCCB4D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = C490A0EA2202CD3A00BCCB4D;
 					};
 					C490A1092202CD3B00BCCB4D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = C490A0EA2202CD3A00BCCB4D;
 					};
 				};
@@ -390,6 +393,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -444,6 +448,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -461,7 +466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teambition.AlertControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -479,7 +484,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teambition.AlertControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -499,7 +504,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teambition.AlertControllerExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlertControllerExample.app/AlertControllerExample";
 			};
@@ -520,7 +525,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teambition.AlertControllerExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlertControllerExample.app/AlertControllerExample";
 			};
@@ -540,7 +545,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teambition.AlertControllerExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AlertControllerExample;
 			};
@@ -560,7 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teambition.AlertControllerExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AlertControllerExample;
 			};
