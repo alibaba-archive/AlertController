@@ -165,15 +165,6 @@ open class AlertController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    override open func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if !isAlert && cancelButtonTag != 0 {
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AlertController.handleContainerViewTapGesture(_:)))
-            containerView.addGestureRecognizer(tapGesture)
-        }
-    }
-    
     open override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         layoutView(self.presentingViewController)
@@ -609,16 +600,6 @@ open class AlertController: UIViewController {
     @objc func buttonTapped(_ sender: UIButton) {
         sender.isSelected = true
         let action = actions[sender.tag - 1]
-        dismiss(animated: true) {
-            self.dimissAction?()
-            action.handler?(action)
-        }
-    }
-    
-    // Handle ContainerView tap gesture
-    @objc func handleContainerViewTapGesture(_ sender: Any) {
-        // cancel action
-        let action = actions[cancelButtonTag - 1]
         dismiss(animated: true) {
             self.dimissAction?()
             action.handler?(action)
