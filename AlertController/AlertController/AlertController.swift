@@ -32,6 +32,9 @@ open class AlertController: UIViewController {
     // AlertView
     open var alertView = UIView()
     open var alertViewBackgroundColor = UIColor.white
+    // max height for alert view
+    // if zero, max height will be 70% of screen height
+    open var alertViewMaxHeight: CGFloat = 0
     fileprivate var alertViewWidth: CGFloat = 270.0
     fileprivate var alertViewHeightConstraint: NSLayoutConstraint?
     fileprivate var alertViewPadding: CGFloat = 16.0
@@ -576,8 +579,13 @@ open class AlertController: UIViewController {
     // Reload AlertView Height
     func reloadAlertViewHeight() {
         let screenSize = self.presentingViewController != nil ? self.presentingViewController!.view.bounds.size : UIScreen.main.bounds.size
-        let maxHeight = screenSize.height * 0.7
-        
+        let maxHeight: CGFloat
+        if alertViewMaxHeight != 0 {
+            maxHeight = alertViewMaxHeight
+        } else {
+            maxHeight = screenSize.height * 0.7
+        }
+
         // for avoiding constraint error
         buttonAreaScrollViewHeightConstraint?.constant = 0
         
