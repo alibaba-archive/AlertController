@@ -121,6 +121,9 @@ open class AlertController: UIViewController {
     ]
     open var buttonSelectedColor: UIColor = UIColor(red:61/255, green:168/255, blue:245/255, alpha:1)
     open var checkmarkTrailing: CGFloat = 16
+    
+    /// 只有在 action 设置了 shouldShowDot 才生效
+    open var dotTintColor: UIColor = UIColor(red: 27.0/255, green: 154.0/255, blue: 238.0/255, alpha: 1.0)
 
     fileprivate var keyboardHeight: CGFloat = 0
     fileprivate var cancelButtonTag = 0
@@ -675,11 +678,29 @@ open class AlertController: UIViewController {
         let button = UIButton()
         button.layer.masksToBounds = true
         button.setTitle(action.title, for: .normal)
+        if action.shouldShowDot, let titleLabel = button.titleLabel {
+            let dotView = makeDotView()
+            button.addSubview(dotView)
+            dotView.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: 10).isActive = true
+            dotView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor).isActive = true
+            dotView.widthAnchor.constraint(equalToConstant: 10).isActive = true
+            dotView.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        }
         button.isEnabled = action.isEnabled
         button.addTarget(self, action: #selector(AlertController.buttonTapped(_:)), for: .touchUpInside)
         button.tag = buttons.count + 1
         buttons.append(button)
         buttonContainer.addSubview(button)
+    }
+    
+    private func makeDotView() -> UIView {
+        let dotView = UIView()
+        dotView.backgroundColor = dotTintColor
+        dotView.translatesAutoresizingMaskIntoConstraints = false
+        dotView.layer.masksToBounds = true
+        dotView.layer.cornerRadius = 5
+        dotView.layer.allowsEdgeAntialiasing = true
+        return dotView
     }
     
     // Adds a text field to an alert.

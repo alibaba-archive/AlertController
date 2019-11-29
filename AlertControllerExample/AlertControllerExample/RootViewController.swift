@@ -124,6 +124,7 @@ class RootViewController: UIViewController {
         let otherAction = AlertAction(title: otherButtonTitle, style: .default) { action in
             print("other action")
         }
+        otherAction.shouldShowDot = true
         
         let cancelAction = AlertAction(title: "Cancel", style: .cancel) { action in
             print("cancel action")

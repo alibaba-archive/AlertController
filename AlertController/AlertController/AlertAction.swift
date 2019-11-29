@@ -13,6 +13,8 @@ let AlertActionEnabledDidChangeNotification = "AlertActionEnabledDidChangeNotifi
 open class AlertAction : NSObject, NSCopying {
     open var title: String?
     open var style: AlertAction.Style
+    open var shouldShowDot: Bool = false
+    
     var handler: ((AlertAction) -> Void)?
     open var isEnabled: Bool {
         didSet {
