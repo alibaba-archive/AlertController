@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TBMAlertController"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.10"
   spec.summary      = "TBMAlertController is a replacement of UIAlertController."
   spec.description  = "TBMAlertController is a replacement of UIAlertController in Swift, It's is like UIAlertController but more powerful."
 
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "bruce" => "liangming@teambition.com" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/teambition/AlertController.git", :tag => "#{spec.version}" }
-  spec.swift_version = "4.2"
+  spec.swift_version = "5.0"
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
