@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TBMAlertController"
-  spec.version      = "0.0.10"
+  spec.version      = "1.0.0"
   spec.summary      = "TBMAlertController is a replacement of UIAlertController."
   spec.description  = "TBMAlertController is a replacement of UIAlertController in Swift, It's is like UIAlertController but more powerful."
 
